@@ -1,4 +1,4 @@
-package jucadv;
+package jucadv.interrupt;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
