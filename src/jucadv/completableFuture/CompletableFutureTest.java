@@ -1,4 +1,4 @@
-package jucadv;
+package jucadv.completableFuture;
 
 import java.util.Random;
 import java.util.concurrent.*;

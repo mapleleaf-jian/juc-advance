@@ -1,4 +1,4 @@
-package jucadv;
+package jucadv.completableFuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -7,20 +7,22 @@ import java.util.concurrent.Executors;
 
 /**
  * @author maple
- * @create 2022-06-15 21:45
+ * @create 2022-06-16 19:17
  */
-public class Com {
+public class Com11 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        CompletableFuture<Void> completableFuture1 = CompletableFuture.runAsync(() -> {
+        CompletableFuture<String> completableFuture1 = CompletableFuture.supplyAsync(() -> {
             System.out.println(Thread.currentThread().getName()); // ForkJoinPool.commonPool-worker-1 (默认线程池)
+            return "hello";
         });
-        System.out.println(completableFuture1.get()); // null
+        System.out.println(completableFuture1.get()); // hello
 
         ExecutorService threadPool = Executors.newFixedThreadPool(3);
-        CompletableFuture<Void> completableFuture2 = CompletableFuture.runAsync(() -> {
+        CompletableFuture<String> completableFuture2 = CompletableFuture.supplyAsync(() -> {
             System.out.println(Thread.currentThread().getName()); // pool-1-thread-1 (自定义线程池)
+            return "hi";
         }, threadPool);
-        System.out.println(completableFuture2.get()); // null
+        System.out.println(completableFuture2.get()); // hi
         threadPool.shutdown();
     }
 }
