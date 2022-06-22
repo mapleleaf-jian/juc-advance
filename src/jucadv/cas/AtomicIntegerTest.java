@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AtomicIntegerTest {
     public static void main(String[] args) {
         AtomicInteger integer = new AtomicInteger(5);
-        System.out.println(integer.compareAndSet(5, 7) + "\t" + integer.get());
+        integer.getAndIncrement();
+        System.out.println(integer.compareAndSet(6, 7) + "\t" + integer.get());
     }
 }
