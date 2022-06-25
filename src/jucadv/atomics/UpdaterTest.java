@@ -14,7 +14,7 @@ class Account {
         money++;
     }
 
-    AtomicIntegerFieldUpdater fieldUpdater =
+    AtomicIntegerFieldUpdater<Account> fieldUpdater =
             AtomicIntegerFieldUpdater.newUpdater(Account.class, "money");
     public void addPlus(Account account) {
         fieldUpdater.getAndIncrement(account);
