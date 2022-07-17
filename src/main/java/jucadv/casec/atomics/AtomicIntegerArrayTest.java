@@ -1,4 +1,4 @@
-package jucadv.atomics;
+package jucadv.casec.atomics;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 

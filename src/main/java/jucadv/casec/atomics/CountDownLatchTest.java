@@ -1,8 +1,6 @@
-package jucadv.atomics;
+package jucadv.casec.atomics;
 
-import javax.naming.SizeLimitExceededException;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**

@@ -1,9 +1,8 @@
-package jucadv.atomics;
+package jucadv.casec.atomics;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
-import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author zcl2806

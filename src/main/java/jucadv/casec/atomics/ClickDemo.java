@@ -1,7 +1,6 @@
-package jucadv.atomics;
+package jucadv.casec.atomics;
 
 
-import javax.management.StringValueExp;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAccumulator;
